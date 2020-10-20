@@ -9,7 +9,7 @@ import com.yonyou.interpreter.common.expression.NonTerminalExpression;
  * @author hlz
  * @date 2020年 10月19日 11:44:37
  */
-public class CustomOperatorExpression extends NonTerminalExpression {
+public class CustomOperatorExpression extends NonTerminalExpression implements ICustomExpression {
     @Override
     protected Object getVal(ExpressionContext context) {
         return null;
@@ -19,4 +19,5 @@ public class CustomOperatorExpression extends NonTerminalExpression {
     public String evaluate(ExpressionContext context) {
         return null;
     }
+
 }

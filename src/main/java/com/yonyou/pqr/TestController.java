@@ -1,5 +1,8 @@
 package com.yonyou.pqr;
 
+import com.yonyou.interpreter.common.expression.bean.CustomExpDO;
+import com.yonyou.pqr.dao.ExpressDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class TestController {
+    @Autowired
+    ExpressDao expressDao;
+
     @GetMapping("test")
     public static String main1() {
         System.out.println("11111");

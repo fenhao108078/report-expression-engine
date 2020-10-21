@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yonyou.pqr.dao.ExpressDao">
+
+    <insert id="insertExpress" parameterType="com.yonyou.interpreter.common.expression.bean.CustomExpDO">
+	 	insert into PQR_EXP (id,set_year, rg_code,co_code,report_id,user_id,args_type,param_num,exp_name,exp_code,exp_type,
+	 	identifier,clazz,input_code,compile_time,create_time,modify_time,create_by,modify_by)
+	 	values(#{id,jdbcType= VARCHAR},#{setYear,jdbcType= INTEGER},#{rgCode,jdbcType= DECIMAL},
+	 	#{coCode,jdbcType= VARCHAR},#{reportId,jdbcType= VARCHAR},#{userId,jdbcType= VARCHAR},
+	 	#{argsType,jdbcType= VARCHAR},#{paramNum,jdbcType= INTEGER},#{expName,jdbcType= VARCHAR},
+	 	#{expCode,jdbcType= VARCHAR},#{expType,jdbcType= INTEGER},#{identifier,jdbcType= VARCHAR},#{clazz,jdbcType= BLOB},
+	 	#{inputCode,jdbcType= VARCHAR},#{compileTime,jdbcType= VARCHAR},#{createTime,jdbcType= VARCHAR},#{modifyTime,jdbcType= VARCHAR},
+	 	#{createBy,jdbcType= VARCHAR},#{modifyBy,jdbcType= VARCHAR})
+	</insert>
+
+</mapper>
